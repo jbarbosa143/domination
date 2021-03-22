@@ -33,9 +33,33 @@ function changeSize(id, size){
 changeSize('thing-c', '65px');
 
 // ===============
-function addThis(newImg){
+function addThis(item){
     const addMe = document.querySelector('#arguments');
-    addMe.appendChild(newImg);
+    addMe.appendChild(item);
 }
 
-addThis('pics/thinking.jpg');
+const test = document.createElement('li');
+test.innerText= 'Hello World!';
+addThis(test)
+
+const newI =document.querySelector('img');
+newI.src = "/pics/thinking.jpg";
+addThis(newI);
+
+// ====================
+function imgHeight(img,imgId){
+    const imgH = document.getElementById(imgId);
+    imgH.style.height = img;
+}
+const altImg = "150px";
+imgHeight(altImg , 'image-3');
+
+// ===============
+function invis(input){
+    document.getElementById(input).className = "invisible";
+
+}
+
+invis('thing-2')
+// ==============
+
